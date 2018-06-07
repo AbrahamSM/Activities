@@ -19,13 +19,25 @@ class RegistroViewController: UIViewController {
     
     var valores = UserDefaults.standard
     
+    var infoUserName = ""
+    var infoContraseña = ""
+    var infoCorreo = ""
+    var infoDistrito = ""
+    var infoIglesia = ""
+    var infoClubName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let info = valores.object(forKey: "userName"){
-            userName.text = info as! String
-            var cadenaMagica = info as! String
-        }
+        userName.text = infoUserName
+        contraseña.text = infoContraseña
+        Correo.text = infoCorreo
+        Distrito.text = infoDistrito
+        Iglesia.text = infoIglesia
+        clubName.text = infoClubName
+        
+        userName1.text = infoUserName
+        password.text = infoContraseña
 
         // Do any additional setup after loading the view.
     }
